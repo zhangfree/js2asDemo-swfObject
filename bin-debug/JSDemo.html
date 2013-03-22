@@ -1,0 +1,32 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"> 
+    <head>
+        <title>js</title>
+        <meta name="google" value="notranslate" />         
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />        
+        <script type="text/javascript" src="swfobject.js"></script>
+        <script type="text/javascript" language="javascript">
+        	var flashvars = {};
+			var params = { swliveconnect:"true" };		
+			var attributes = {id:"JSDemo",name:"JSDemo",allowscriptaccess:"always"};
+        	var so = swfobject.embedSWF("JSDemo.swf", "flashContent", "300", "120", "9.0.0", "expressInstall.swf",flashvars,params,attributes);
+        	//as调用js
+        	function callJavascript()
+        	{
+        		alert(22222222);
+        	}
+        	
+        	function onClickBtn()
+        	{
+        		var obj = document.getElementById("JSDemo");
+        		 document.getElementById("JSDemo").callFlash();
+        	}
+        	        	
+        	
+		</script>
+    </head>
+    <body>
+        <div id="flashContent"></div>   
+        <p><button id="btn" onclick="onClickBtn()">callFlash</button></p>
+   </body>
+</html>
